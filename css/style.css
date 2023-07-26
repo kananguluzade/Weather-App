@@ -1,0 +1,141 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.all-items-night {
+  color: rgb(248, 248, 248);
+}
+
+.all-items-day {
+  color: black;
+}
+
+.dayImage {
+  background-image: url(../assets/clouds-cloudy-sky-spring-summer-fall-winter-weather-generic-8-1.webp);
+}
+
+.nightImage {
+  background-image: url(../assets/pexels-photo-4737484.webp);
+}
+
+.weather-container {
+  width: 350px;
+  height: 450px;
+  background-color: rgba(192, 180, 207, 0.897);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.color-filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.color-filter-day {
+  background-color: rgb(149, 168, 194);
+  box-shadow: 3px 3px rgba(114, 111, 121, 0.589);
+}
+
+.color-filter-night {
+  background-color: rgba(46, 13, 129, 0.589);
+  box-shadow: 3px 3px rgba(38, 19, 82, 0.589);
+}
+
+.country-city{
+  margin-bottom: 10px;
+}
+
+.search-container {
+  width: 100%;
+  background-color: rgb(218, 218, 218);
+  border-radius: 8px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-text {
+  width: 275px;
+  border: 0px;
+  height: 100%;
+  padding: 0px;
+  border-radius: 8px;
+  padding-left: 8px;
+  background-color: rgb(218, 218, 218);
+}
+
+.search-text:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.search-btn {
+  cursor: pointer;
+  border: 0px;
+  background-color: gray;
+  color: rgb(218, 218, 218);
+  font-weight: 500;
+  height: 100%;
+  padding: 0px;
+  border-radius: 0px 8px 8px 0px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.degree-farenheit {
+  font-size: 30px;
+}
+
+.main {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .weather-container {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
+  .color-filter {
+    opacity: 0;
+  }
+  .search-container {
+    width: 100%;
+    opacity: 0.5;
+    z-index: 2;
+    margin-top: 20px;
+  }
+  .country-city {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  img {
+    width: 200px;
+  }
+}
